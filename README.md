@@ -1,4 +1,4 @@
-# Book Catalog Generator
+# Books Catalog Generator
 
 A Django web application to manage and generate a catalog of books. Add, edit, and delete books, and download your catalog as CSV or PDF. Features a modern UI with light/dark mode.
 
