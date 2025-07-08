@@ -9,23 +9,25 @@ A Django web application to manage and generate a catalog of books. Add, edit, a
 - Responsive UI with light/dark mode toggle
 
 ## Screenshots
-- Light Mode
+
+- Light Mode  
 ![Light Mode](example_images/light.png)
 
-- Dark Mode
+- Dark Mode  
 ![Dark Mode](example_images/dark.png)
 
-- CSV Output
+- CSV Output  
 ![CSV Output](example_images/csv_output.png)
 
-- PDF Output
+- PDF Output  
 ![PDF Output](example_images/pdf_output.png)
 
-- Delete Functionality
+- Delete Functionality  
 ![Delete Functionality](example_images/delete.png)
 
-- Edit Functionality
+- Edit Functionality  
 ![Edit Functionality](example_images/edit.png)
+
 
 
 ## Getting Started
