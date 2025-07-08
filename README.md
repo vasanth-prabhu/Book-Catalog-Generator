@@ -10,8 +10,13 @@ A Django web application to manage and generate a catalog of books. Add, edit, a
 
 ## Screenshots
 
-![Light Mode](example_images/user_profile_light.png)
-![Dark Mode](example_images/user_profile_dark.png)
+![Light Mode](example_images/light.png)
+![Dark Mode](example_images/dark.png)
+![CSV Output](example_images/csv_output.png)
+![PDF Output](example_images/pdf_output.png)
+![Delete Functionality](example_images/delete.png)
+![Edit Functionality](example_images/edit.png)
+
 
 ## Getting Started
 
@@ -81,4 +86,3 @@ A Django web application to manage and generate a catalog of books. Add, edit, a
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-*Made with Django & ReportLab*
