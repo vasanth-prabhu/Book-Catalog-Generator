@@ -1,39 +1,45 @@
-# Book-Catalog-Generator
+# Book Catalog Generator
 
-A Django web application to manage and generate a catalog of books. Users can add, edit, and delete books, as well as view their personal book catalog with a modern, responsive interface.
+A Django web application to manage and generate a catalog of books. Add, edit, and delete books, and download your catalog as CSV or PDF. Features a modern UI with light/dark mode.
 
 ## Features
 
-- User authentication and profile management
-- Add, edit, and delete books
+- Add, edit, and delete books (ID, title, author, year)
+- Download catalog as CSV or PDF
 - Responsive UI with light/dark mode toggle
-- Secure forms with CSRF protection
-- SQLite database for easy setup
+
+## Screenshots
+
+![Light Mode](example_images/user_profile_light.png)
+![Dark Mode](example_images/user_profile_dark.png)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.10+
+- Python 3.8+
 - pip
 
 ### Installation
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/Book-Catalog-Generator.git
-   cd Book-Catalog-Generator
+   git clone https://github.com/yourusername/book-catalog-generator.git
+   cd book-catalog-generator
    ```
 
 2. **Create and activate a virtual environment:**
    ```sh
    python -m venv venv
+   # On Windows:
    venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
    ```
 
 3. **Install dependencies:**
    ```sh
-   pip install -r requirements.txt
+   pip install django reportlab
    ```
 
 4. **Apply migrations:**
@@ -41,60 +47,38 @@ A Django web application to manage and generate a catalog of books. Users can ad
    python manage.py migrate
    ```
 
-5. **Create a superuser (optional, for admin access):**
-   ```sh
-   python manage.py createsuperuser
-   ```
-
-6. **Run the development server:**
+5. **Run the development server:**
    ```sh
    python manage.py runserver
    ```
 
-7. **Open your browser and visit:**
+6. **Open your browser and go to:**
    ```
    http://127.0.0.1:8000/
    ```
 
-## Project Structure
-
-```
-Book-Catalog-Generator/
-├── catalog_generator/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   ├── views.py
-│   ├── static/
-│   └── templates/
-├── project/
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── db.sqlite3
-├── manage.py
-└── README.md
-```
-
 ## Usage
 
-- Register or log in to your account.
-- Add new books using the form on your profile page.
+- Add a new book using the form.
 - Edit or delete existing books.
-- Toggle between light and dark mode for a comfortable viewing experience.
+- Download the catalog as CSV or PDF.
+- Toggle light/dark mode with the button in the top right.
+
+## Project Structure
+
+- [`catalog_generator/`](catalog_generator/) - Django app (models, views, forms, templates, static)
+- [`project/`](project/) - Django project settings and configuration
+- [`example_images/`](example_images/) - Example screenshots
+- [`manage.py`](manage.py) - Django management script
+
+## Customization
+
+- To change book fields, edit [`catalog_generator.models.Book`](catalog_generator/models.py).
+- To modify the UI, edit templates in [`catalog_generator/templates/`](catalog_generator/templates/) and CSS in [`catalog_generator/static/`](catalog_generator/static/).
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
-## Acknowledgements
-
-- [Django](https://www.djangoproject.com/)
-- [SQLite](https://www.sqlite.org/)
+---
+*Made with Django & ReportLab*
