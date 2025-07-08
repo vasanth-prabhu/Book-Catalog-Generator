@@ -29,7 +29,6 @@ A Django web application to manage and generate a catalog of books. Add, edit, a
 ![Edit Functionality](example_images/edit.png)
 
 
-
 ## Getting Started
 
 ### Prerequisites
@@ -64,12 +63,17 @@ A Django web application to manage and generate a catalog of books. Add, edit, a
    python manage.py migrate
    ```
 
-5. **Run the development server:**
+4. **Create superuser for admin access (optional):**
+   ```sh
+   python manage.py createsuperuser
+   ```
+
+6. **Run the development server:**
    ```sh
    python manage.py runserver
    ```
 
-6. **Open your browser and go to:**
+7. **Open your browser and go to:**
    ```
    http://127.0.0.1:8000/
    ```
@@ -85,7 +89,6 @@ A Django web application to manage and generate a catalog of books. Add, edit, a
 
 - [`catalog_generator/`](catalog_generator/) - Django app (models, views, forms, templates, static)
 - [`project/`](project/) - Django project settings and configuration
-- [`example_images/`](example_images/) - Example screenshots
 - [`manage.py`](manage.py) - Django management script
 
 ## Customization
