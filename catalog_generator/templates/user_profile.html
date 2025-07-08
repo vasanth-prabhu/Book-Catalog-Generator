@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Generate Book Catalog</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'user_profile.css' %}">
+  <link rel="stylesheet" href="{% static 'user_profile_dark.css' %}" id="darkModeCSS" disabled>
+
+</head>
+
+<body>
+  <div class="container">
+    <div style="display: flex; justify-content: flex-end;">
+      <button id="darkModeToggle" type="button" aria-pressed="false" title="Toggle dark mode"
+        style="background: #2b2727; border: none; font-size: 1.3em; cursor: pointer; padding: 0.2em 0.5em;">
+        <span id="darkModeIcon">🌙</span>
+      </button>
+    </div>
+    <h1 style="margin: 0;">Catalog Generator for Books</h1>
+    <h2>Add a New Book</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Add Book</button>
+    </form>
+    <div class="download-links">
+      <a href="{% url 'generate_csv' %}" download>Download Book Catalog (CSV)</a>
+      <a href="{% url 'generate_pdf' %}" download>Download Book Catalog (PDF)</a>
+    </div>
+    <div class="book-list">
+      {% if books %}
+      <table class="book-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for book in books %}
+          <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>
+              <a class="edit-link" href="{% url 'edit_book' book.id %}">Edit</a>
+              <a class="delete-link" href="{% url 'delete_book' book.id %}">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p style="text-align:center; color:#888;">No books added yet.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    const darkCSS = document.getElementById('darkModeCSS');
+    const icon = document.getElementById('darkModeIcon');
+
+    function setDarkModeUI(isDark) {
+      toggle.setAttribute('aria-pressed', isDark);
+      icon.textContent = isDark ? '☀️' : '🌙';
+    }
+
+    toggle.addEventListener('click', () => {
+      const isDark = darkCSS.disabled === false;
+      darkCSS.disabled = isDark;
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      setDarkModeUI(!isDark);
+    });
+
+    const isDark = localStorage.getItem('theme') === 'dark';
+    darkCSS.disabled = !isDark;
+    setDarkModeUI(isDark);
+  </script>
+
+</body>
+</html>

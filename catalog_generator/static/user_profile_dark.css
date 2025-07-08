@@ -1,0 +1,73 @@
+body {
+    background: #181a1b !important;
+    color: #f1f1f1 !important;
+}
+
+.container {
+    background: #232526 !important;
+    box-shadow: 0 4px 24px rgba(20, 20, 20, 0.3) !important;
+}
+
+h1,
+h2 {
+    color: #e0e6ed !important;
+}
+
+form {
+    background: #232526 !important;
+    box-shadow: 0 1px 4px rgba(20, 20, 20, 0.15) !important;
+}
+
+button[type="submit"] {
+    background: #2980b9 !important;
+    color: #fff !important;
+}
+
+button[type="submit"]:hover {
+    background: #3498db !important;
+}
+
+.download-links a {
+    background: #145a32 !important;
+    color: #fff !important;
+}
+
+.download-links a:hover {
+    background: #229954 !important;
+}
+
+.book-item {
+    background: #232526 !important;
+    color: #f1f1f1 !important;
+}
+
+.book-info {
+    color: #e0e6ed !important;
+}
+
+.delete-link {
+    background: #922b21 !important;
+}
+
+.delete-link:hover {
+    background: #c0392b !important;
+}
+
+.edit-link {
+    background: #7d6608 !important;
+}
+
+.edit-link:hover {
+    background: #b7950b !important;
+}
+
+.book-table th,
+.book-table td {
+    background: #232526 !important;
+    color: #f1f1f1 !important;
+}
+
+#darkModeToggle {
+    background: #f1c40f !important;
+    color: #222 !important;
+}

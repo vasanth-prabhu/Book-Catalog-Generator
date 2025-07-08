@@ -1,0 +1,151 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+  padding: 2em 2.5em 2em 2.5em;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: #2980b9;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+form {
+  margin-bottom: 2em;
+  background: #f8f9fa;
+  padding: 1em 1.5em;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.03);
+}
+
+button[type="submit"] {
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5em;
+}
+
+button[type="submit"]:hover {
+  background: #3498db;
+}
+
+.download-links {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.download-links a {
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  margin: 0 0.5em;
+  font-size: 1em;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.download-links a:hover {
+  background: #2ecc71;
+}
+
+.book-list {
+  margin-top: 1.5em;
+}
+
+.book-item {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 1em 1.5em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.03);
+}
+
+.book-info {
+  color: #2c3e50;
+}
+
+.delete-link {
+  background: #c0392b;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4em 1em;
+  border-radius: 4px;
+  font-size: 0.95em;
+  transition: background 0.2s;
+}
+
+.delete-link:hover {
+  background: #e74c3c;
+}
+
+.edit-link {
+  background: #89c919;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4em 1em;
+  border-radius: 4px;
+  font-size: 0.95em;
+  transition: background 0.2s;
+}
+
+.edit-link:hover {
+  background: #d8cb1a;
+}
+
+.book-table th,
+.book-table td {
+  padding: 12px 24px;
+  text-align: left;
+}
+
+#darkModeToggle {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#darkModeToggle[aria-pressed="true"] {
+  background: #f1c40f;
+  color: #222;
+}
+
+#darkModeToggle:focus {
+  outline: 2px solid #2980b9;
+}
