@@ -31,11 +31,6 @@ A Django web application to manage and generate a catalog of books. Add, edit, a
 
 ## Getting Started
 
-### Prerequisites
-
-- Python 3.8+
-- pip
-
 ### Installation
 
 1. **Clone the repository:**
